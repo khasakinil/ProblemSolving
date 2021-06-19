@@ -1,0 +1,19 @@
+package com.practice;
+
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+public class FirstNonRepeatingCharacter {
+	public static void main(String args[]) {
+		String str = "repeating character";
+		Set<Character> uniqueChar = new LinkedHashSet<>();
+		Set<Character> dupChar = new LinkedHashSet<>();
+
+		for (int i = 0; i < str.length(); i++) {
+			if (!uniqueChar.add(str.charAt(i)) || !dupChar.add(str.charAt(i))) {
+				uniqueChar.remove(str.charAt(i));
+			}
+		}
+		System.out.println("First non repeating character : " + uniqueChar.toArray()[0]);
+	}
+}
