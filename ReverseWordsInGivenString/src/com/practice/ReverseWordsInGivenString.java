@@ -3,11 +3,8 @@ package com.practice;
 public class ReverseWordsInGivenString {
 	public static void main(String[] args) {
 		String input = "i.like.this.program.very.much";
-
 		StringBuilder reverseWord = reverseWordsInString(input);
-
 		System.out.println("Reverse String in Words : " + reverseWord);
-
 	}
 
 	private static StringBuilder reverseWordsInString(String input) {
