@@ -4,9 +4,7 @@ public class LongestCommonPrefixInArray {
 
 	public static void main(String[] args) {
 		String arr[] = { "geeksforgeeks", "geeks", "geek", "geezer" };
-
 		String commonPrefix = getLongestCommonPrefix(arr);
-
 		System.out.println("LongestCommonPrefixInArray : " + commonPrefix);
 	}
 
