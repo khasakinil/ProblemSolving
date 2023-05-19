@@ -39,6 +39,10 @@ public class LongestCommonPrefixInArray {
 			}
 		}
 
-		return commonPrefix;
+		if (commonPrefix.length() == 0) {
+			return "-1";
+		} else {
+			return commonPrefix;
+		}
 	}
 }
