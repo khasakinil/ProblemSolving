@@ -6,8 +6,8 @@ import java.util.Map;
 public class Anagram {
 
 	public static void main(String[] args) {
-		String str1 = "geeksforgeeksw";
-		String str2 = "forgeeksgeeks";
+		String str1 = "abcdef";
+		String str2 = "cdefa";
 
 		String isAnagram = checkIsAnagram(str1, str2);
 		System.out.println("isAnagram : " + isAnagram);
@@ -29,11 +29,14 @@ public class Anagram {
 
 		for (Map.Entry<Character, Integer> map : str1CharCount.entrySet()) {
 			Character key = map.getKey();
-
 			if (str2CharCount.get(key) != map.getValue()) {
 				isAnagram = "NO";
 				break;
 			}
+		}
+
+		if (str2CharCount.size() != str1CharCount.size()) {
+			isAnagram = "NO";
 		}
 
 		return isAnagram;
