@@ -6,8 +6,8 @@ import java.util.TreeSet;
 public class UncommonCharacters {
 
 	public static void main(String[] args) {
-		String str1 = "geeksforgeeks";
-		String str2 = "geeksquiz";
+		String str1 = "geeks";
+		String str2 = "geeks";
 
 		String uncommonCharacters = getUncommonCharacters(str1, str2);
 
@@ -34,7 +34,11 @@ public class UncommonCharacters {
 			uncommonStr += c;
 		}
 
-		return uncommonStr;
+		if (uncommonStr.length() > 0) {
+			return uncommonStr;
+		} else {
+			return "-1";
+		}
 	}
 
 }
