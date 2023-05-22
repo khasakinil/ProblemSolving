@@ -17,8 +17,9 @@ public class LongestPalindrome {
 		for (int i = 0; i <= str.length(); i++) {
 			for (int j = i + 1; j <= str.length(); j++) {
 				String currentStr = str.substring(i, j);
-				if (isPalindrome(currentStr)) {
-					if (currentStr.length() > longestPalindrome.length()) {
+
+				if (currentStr.length() > longestPalindrome.length()) {
+					if (isPalindrome(currentStr)) {
 						longestPalindrome = currentStr;
 					}
 				}
