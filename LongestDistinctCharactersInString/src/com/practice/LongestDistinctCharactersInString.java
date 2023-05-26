@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LongestDistinctCharactersInString {
+
 	public static void main(String[] args) {
 		String str = "geeksforgeeks";
 		String output = getLongestDistinctCharactersInString(str);
@@ -16,7 +17,7 @@ public class LongestDistinctCharactersInString {
 		for (int i = 0; i <= str.length(); i++) {
 			for (int j = i + 1; j <= str.length(); j++) {
 				String temp = str.substring(i, j);
-				if (!isContainDuplicate(temp) && longestString.length() < temp.length()) {
+				if (longestString.length() < temp.length() && !isContainDuplicate(temp)) {
 					longestString = temp;
 				}
 			}
