@@ -6,17 +6,17 @@ import java.util.Map;
 public class IsomorphicStrings {
 	public static void main(String args[]) {
 		String str1 = "aab";
-		String str2 = "xty";
-		int isIsomorphic = IsomorphicString(str1, str2);
+		String str2 = "xxy";
+		boolean isIsomorphic = IsomorphicString(str1, str2);
 		System.out.println("IsomorphicStrings : " + isIsomorphic);
 	}
 
-	private static int IsomorphicString(String str1, String str2) {
+	private static boolean IsomorphicString(String str1, String str2) {
 
 		Map<Character, Character> isoMapStr1 = new HashMap<>();
 		Map<Character, Character> isoMapStr2 = new HashMap<>();
 		if (str1.length() != str2.length()) {
-			return 0;
+			return false;
 		} else {
 			for (int i = 0; i < str1.length(); i++) {
 				if (isoMapStr1.get(str1.charAt(i)) == null) {
@@ -29,10 +29,10 @@ public class IsomorphicStrings {
 
 				if (str2.charAt(i) != isoMapStr1.get(str1.charAt(i))
 						|| str1.charAt(i) != isoMapStr2.get(str2.charAt(i))) {
-					return 0;
+					return false;
 				}
 			}
-			return 1;
+			return true;
 		}
 	}
 }
