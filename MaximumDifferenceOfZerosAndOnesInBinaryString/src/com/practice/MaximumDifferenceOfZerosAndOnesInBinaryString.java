@@ -13,18 +13,19 @@ public class MaximumDifferenceOfZerosAndOnesInBinaryString {
 
 		for (int i = 0; i < str.length(); i++) {
 			int count = 0;
-			for (int j = i + 1; j < str.length(); j++) {
-				if (str.charAt(i) != str.charAt(j)) {
+			for (int j = i; j < str.length(); j++) {
+				if (str.charAt(j) == '1') {
 					count++;
-					continue;
+				} else {
+					count--;
 				}
-				if (maxDiff < count) {
-					maxDiff = count;
+				if (maxDiff < Math.abs(count)) {
+					maxDiff = Math.abs(count);
 				}
-				break;
 			}
+
 		}
-		if (maxDiff == 0) {
+		if (maxDiff == 0 || str.length() == maxDiff) {
 			return -1;
 		}
 		return maxDiff;
