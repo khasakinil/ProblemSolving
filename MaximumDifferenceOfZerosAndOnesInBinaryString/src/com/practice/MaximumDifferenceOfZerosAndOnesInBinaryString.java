@@ -2,7 +2,7 @@ package com.practice;
 
 public class MaximumDifferenceOfZerosAndOnesInBinaryString {
 	public static void main(String args[]) {
-		String str = "11000010001";
+		String str = "00111";
 		int maxDiffInZeroAndOne = getMaximumDifferenceOfZerosAndOnesInBinaryString(str);
 
 		System.out.println("maxDiffInZeroAndOne : " + maxDiffInZeroAndOne);
@@ -13,13 +13,17 @@ public class MaximumDifferenceOfZerosAndOnesInBinaryString {
 
 		for (int i = 0; i < str.length(); i++) {
 			int count = 0;
+			boolean isContainZero = false;
+			boolean isContainOne = false;
 			for (int j = i; j < str.length(); j++) {
 				if (str.charAt(j) == '1') {
 					count++;
+					isContainOne = true;
 				} else {
 					count--;
+					isContainZero = true;
 				}
-				if (maxDiff < Math.abs(count)) {
+				if (maxDiff < Math.abs(count) && isContainZero && isContainOne) {
 					maxDiff = Math.abs(count);
 				}
 			}
