@@ -2,7 +2,7 @@ package com.practice;
 
 public class AddMinimumCharactersToMakePalindrome {
 	public static void main(String args[]) {
-		String input = "ABCD";
+		String input = "ABA";
 		int minCharToMakePalindrome = getMinimumCharactersToMakePalindrome(input);
 		System.out.println("minCharToMakePalindrome : " + minCharToMakePalindrome);
 	}
@@ -11,9 +11,9 @@ public class AddMinimumCharactersToMakePalindrome {
 
 		int minChars = 0;
 		int palindromeTillLength = 0;
-		if (isPalindrome(input)) {
-			return 0;
-		}
+//		if (isPalindrome(input)) {
+//			return 0;
+//		}
 
 //		for (int i = 1; i < input.length(); i++) {
 //			if (isPalindrome(input.substring(0, i))) {
