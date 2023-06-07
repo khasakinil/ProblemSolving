@@ -2,21 +2,40 @@ package com.practice;
 
 public class AddMinimumCharactersToMakePalindrome {
 	public static void main(String args[]) {
-
 		String input = "ABCD";
 		int minCharToMakePalindrome = getMinimumCharactersToMakePalindrome(input);
 		System.out.println("minCharToMakePalindrome : " + minCharToMakePalindrome);
 	}
 
 	private static int getMinimumCharactersToMakePalindrome(String input) {
+
+		int minChars = 0;
+		int palindromeTillLength = 0;
 		if (isPalindrome(input)) {
 			return 0;
 		}
-		return 0;
+
+		for (int i = 1; i < input.length(); i++) {
+			if (!isPalindrome(input.substring(0, i))) {
+				break;
+			}
+			palindromeTillLength++;
+		}
+		minChars = input.length() - palindromeTillLength;
+		return minChars;
 	}
 
 	private static boolean isPalindrome(String input) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean isPandrome = true;
+		int i = 0, j = input.length() - 1;
+		while (i < j) {
+			if (input.charAt(i) != input.charAt(j)) {
+				isPandrome = false;
+				break;
+			}
+			i++;
+			j--;
+		}
+		return isPandrome;
 	}
 }
