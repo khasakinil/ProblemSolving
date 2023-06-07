@@ -15,12 +15,19 @@ public class AddMinimumCharactersToMakePalindrome {
 			return 0;
 		}
 
-		for (int i = 1; i < input.length(); i++) {
-			if (!isPalindrome(input.substring(0, i))) {
+//		for (int i = 1; i < input.length(); i++) {
+//			if (isPalindrome(input.substring(0, i))) {
+//				palindromeTillLength = i;
+//			}
+//		}
+		
+		for (int i = input.length(); i >= 0; i--) {
+			if (isPalindrome(input.substring(0, i))) {
+				palindromeTillLength = i;
 				break;
 			}
-			palindromeTillLength++;
 		}
+		
 		minChars = input.length() - palindromeTillLength;
 		return minChars;
 	}
