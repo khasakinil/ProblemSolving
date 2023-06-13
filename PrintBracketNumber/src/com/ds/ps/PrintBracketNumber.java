@@ -1,29 +1,31 @@
 package com.ds.ps;
 
+import java.util.ArrayList;
+
 public class PrintBracketNumber {
 	public static void main(String args[]) {
 		String exp = "(((()(";
 
-		String bracketNumber = getBracketNumber(exp);
+		ArrayList<Integer> bracketNumber = getBracketNumber(exp);
 		System.out.println("bracketNumber : " + bracketNumber);
 	}
 
-	private static String getBracketNumber(String exp) {
-		StringBuilder sb = new StringBuilder();
-		
+	private static ArrayList<Integer> getBracketNumber(String exp) {
+		ArrayList<Integer> bracketNumber = new ArrayList<Integer>();
+
 		int nextOpen = 1;
 		int nextbracket = 1;
-		
-		for(int i=0; i<exp.length(); i++) {
-			if(exp.charAt(i) == '(') {
-				sb.append(nextOpen + " ");
+
+		for (int i = 0; i < exp.length(); i++) {
+			if (exp.charAt(i) == '(') {
+				bracketNumber.add(nextOpen);
 				nextOpen++;
-				nextbracket=nextOpen;
-			}else if(exp.charAt(i) == ')') {
+				nextbracket = nextOpen;
+			} else if (exp.charAt(i) == ')') {
 				nextbracket--;
-				sb.append(nextbracket + " ");
+				bracketNumber.add(nextbracket);
 			}
 		}
-		return sb.toString();
+		return bracketNumber;
 	}
 }
