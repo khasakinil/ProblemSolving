@@ -1,10 +1,11 @@
 package com.ds.ps;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 public class PrintBracketNumber {
 	public static void main(String args[]) {
-		String exp = "(((()(";
+		String exp = "(aa(bdc))p(dee)";
 
 		ArrayList<Integer> bracketNumber = getBracketNumber(exp);
 		System.out.println("bracketNumber : " + bracketNumber);
@@ -13,17 +14,17 @@ public class PrintBracketNumber {
 	private static ArrayList<Integer> getBracketNumber(String exp) {
 		ArrayList<Integer> bracketNumber = new ArrayList<Integer>();
 
+		Stack<Integer> bracketStack = new Stack<>();
+		
 		int nextOpen = 1;
-		int nextbracket = 1;
 
 		for (int i = 0; i < exp.length(); i++) {
 			if (exp.charAt(i) == '(') {
-				bracketNumber.add(nextOpen);
-				nextOpen++;
-				nextbracket = nextOpen;
+				bracketStack.add(nextOpen++);
+				bracketNumber.add(bracketStack.peek());
 			} else if (exp.charAt(i) == ')') {
-				nextbracket--;
-				bracketNumber.add(nextbracket);
+				bracketNumber.add(bracketStack.peek());
+				bracketStack.pop();
 			}
 		}
 		return bracketNumber;
