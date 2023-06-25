@@ -11,13 +11,17 @@ public class PrefixMatchWithOtherStrings {
 	}
 
 	private static int getPrefixMatchWithOtherStrings(String[] arr, int n, int k, String str) {
-		String subStr = str.substring(0, k);
-		int count = 0;
-		for (int i = 0; i < arr.length; i++) {
-			if (arr[i].startsWith(subStr)) {
-				count++;
+
+		if (k <= str.length()) {
+			String subStr = str.substring(0, k);
+			int count = 0;
+			for (int i = 0; i < arr.length; i++) {
+				if (arr[i].length() >= subStr.length() && arr[i].startsWith(subStr)) {
+					count++;
+				}
 			}
+			return count;
 		}
-		return count;
+		return 0;
 	}
 }
