@@ -29,9 +29,10 @@ public class CheckIfTwoArraysAreEqual {
 			if (arr2Map.get(map.getKey()) == null || arr2Map.get(map.getKey()) != map.getValue()) {
 				return false;
 			}
+			arr2Map.remove(map.getKey());
 		}
 
-		if (arr1Map.size() != arr2Map.size()) {
+		if (arr2Map.size() != 0) {
 			return false;
 		}
 
