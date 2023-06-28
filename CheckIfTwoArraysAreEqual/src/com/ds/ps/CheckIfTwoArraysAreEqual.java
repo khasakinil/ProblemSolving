@@ -5,8 +5,8 @@ import java.util.Map;
 
 public class CheckIfTwoArraysAreEqual {
 	public static void main(String args[]) {
-		long arr1[] = { 1, 2, 5, 4, 0 };
-		long arr2[] = { 2, 4, 5, 0, 1 };
+		long arr1[] = { 16, 1, 2, 14, 13, 17, 1 };
+		long arr2[] = { 14, 1, 16, 2, 13, 2, 17 };
 
 		boolean isTwoArraysEqual = getTwoArraysEqualityStatus(arr1, arr2);
 		System.out.println("IsTwoArraysEqual : " + isTwoArraysEqual);
