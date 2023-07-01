@@ -13,6 +13,15 @@ public class SubarrayWithGivenSum {
 	private static ArrayList<Integer> getSubarrayWithGivenSum(int[] arr, int s) {
 
 		ArrayList<Integer> subArrayList = new ArrayList<>();
+		
+		int arrSum = 0;
+		int i = 0;
+		int j = 0;
+		
+		while(j<arr.length) {
+			arrSum+=arr[j];
+			j++;
+		}
 
 		for (int i = 0; i < arr.length; i++) {
 			int arrSum = 0;
