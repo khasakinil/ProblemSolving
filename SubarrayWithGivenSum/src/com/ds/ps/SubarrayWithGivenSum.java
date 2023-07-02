@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class SubarrayWithGivenSum {
 	public static void main(String args[]) {
-		int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-		int s = 15;
+		int[] arr = { 1, 2, 3, 7, 5 };
+		int s = 12;
 		ArrayList<Integer> subArrayList = getSubarrayWithGivenSum(arr, s);
 		System.out.println("SubArrayList : " + subArrayList);
 	}
@@ -13,29 +13,24 @@ public class SubarrayWithGivenSum {
 	private static ArrayList<Integer> getSubarrayWithGivenSum(int[] arr, int s) {
 
 		ArrayList<Integer> subArrayList = new ArrayList<>();
-		
 		int arrSum = 0;
-		int i = 0;
+		int i = -1;
 		int j = 0;
-		
-		while(j<arr.length) {
-			arrSum+=arr[j];
-			j++;
-		}
 
-		for (int i = 0; i < arr.length; i++) {
-			int arrSum = 0;
-			for (int j = i; j < arr.length; j++) {
-				arrSum += arr[j];
-				if (arrSum == s) {
-					subArrayList.add(i + 1);
-					subArrayList.add(j + 1);
-					return subArrayList;
-				}
-				if (arrSum > s) {
-					break;
-				}
+		while (j <= arr.length && j >= i) {
+
+			if (arrSum == s) {
+				subArrayList.add(i + 2);
+				subArrayList.add(j);
+				return subArrayList;
 			}
+
+			if (arrSum > s) {
+				arrSum -= arr[++i];
+				continue;
+			}
+			arrSum += arr[j];
+			j++;
 		}
 
 		subArrayList.add(-1);
