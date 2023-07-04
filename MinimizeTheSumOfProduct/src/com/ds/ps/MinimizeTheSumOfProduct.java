@@ -2,13 +2,15 @@ package com.ds.ps;
 
 public class MinimizeTheSumOfProduct {
 	public static void main(String args[]) {
-		long arr1[] = { 3, 1, 1 };
-		long arr2[] = { 6, 5, 4 };
+		long arr1[] = { 7, 18, 16, 14 };
+		long arr2[] = { 16, 7, 13, 10 };
 		long minimumProduct = minimizeTheSumOfProduct(arr1, arr2);
 		System.out.println("MinimumProduct : " + minimumProduct);
 	}
 
 	private static long minimizeTheSumOfProduct(long[] arr1, long[] arr2) {
+
+		// implement with quick sort algorithm to minimize the time complexity
 
 		long minimizedProduct = 0;
 
