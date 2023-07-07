@@ -5,8 +5,8 @@ import java.util.Map;
 
 public class KeyPair {
 	public static void main(String args[]) {
-		int arr[] = { 1, 4, 45, 6, 10, 8 };
-		int x = 16;
+		int arr[] = { 1, 2, 5, 6, 7 };
+		int x = 4;
 		boolean status = hasArrayTwoCandidates(arr, x);
 		System.out.println("status : " + status);
 	}
@@ -18,7 +18,12 @@ public class KeyPair {
 		}
 
 		for (Map.Entry<Integer, Integer> map : numMap.entrySet()) {
-
+			if (numMap.containsKey(x - map.getKey()) && map.getValue() >= 2) {
+				return true;
+			}
+			if (numMap.containsKey(x - map.getKey()) && map.getKey() != (x - map.getKey())) {
+				return true;
+			}
 		}
 
 		return false;
