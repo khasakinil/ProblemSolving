@@ -8,7 +8,7 @@ public class KeyPair {
 		int arr[] = { 1, 2, 5, 6, 7 };
 		int x = 4;
 		boolean status = hasArrayTwoCandidates(arr, x);
-		System.out.println("status : " + status);
+		System.out.println("status :  " + status);
 	}
 
 	private static boolean hasArrayTwoCandidates(int[] arr, int x) {
