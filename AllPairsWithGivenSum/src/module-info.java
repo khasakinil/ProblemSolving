@@ -4,24 +4,20 @@
 /**
  * @author nilakanth
  *
- *         Given a sorted array arr[] of distinct integers. Sort the array into
- *         a wave-like array(In Place). In other words, arrange the elements
- *         into a sequence such that arr[1] >= arr[2] <= arr[3] >= arr[4] <=
- *         arr[5].....
+ *         Given two unsorted arrays A of size N and B of size M of distinct
+ *         elements, the task is to find all pairs from both arrays whose sum is
+ *         equal to X.
  * 
- *         If there are multiple solutions, find the lexicographically smallest
- *         one.
- * 
- *         Note:The given array is sorted in ascending order, and you don't need
- *         to return anything to make changes in the original array itself.
+ *         Note: All pairs should be printed in increasing order of u. For eg.
+ *         for two pairs (u1,v1) and (u2,v2), if u1 < u2 then (u1,v1) should be
+ *         printed first else second.
  * 
  *         Example 1:
  * 
- *         Input: n = 5 arr[] = {1,2,3,4,5} Output: 2 1 4 3 5 Explanation: Array
- *         elements after sorting it in wave form are 2 1 4 3 5. Example 2:
- * 
- *         Input: n = 6 arr[] = {2,4,7,8,9,10} Output: 4 2 8 7 10 9 Explanation:
- *         Array elements after sorting it in wave form are 4 2 8 7 10 9.
+ *         Input: A[] = {1, 2, 4, 5, 7} B[] = {5, 6, 3, 4, 8} X = 9 Output: 1 8
+ *         4 5 5 4 Explanation: (1, 8), (4, 5), (5, 4) are the pairs which sum
+ *         to 9. Example 2: Input: A[] = {-1, -2, 4, -6, 5, 7} B[] = {6, 3, 4,
+ *         0} X = 8 Output: 4 4 5 3
  *
  */
 module KeyPair {
