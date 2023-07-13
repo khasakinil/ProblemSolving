@@ -7,8 +7,8 @@ import java.util.Map;
 
 public class AllPairsWithGivenSum {
 	public static void main(String args[]) {
-		int arr1[] = { 1, 2, 4, 5, 7, -3 };
-		int arr2[] = { 5, 6, 3, 4, 8, 12 };
+		int arr1[] = { 1, 2, 4, 5, 7, -3, 56, 90 };
+		int arr2[] = { 5, 6, 3, 4, 8, 12, 9, -81 };
 		int s = 9;
 		List<List<Integer>> pairList = getAllPairsWithGivenSum(arr1, arr2, s);
 		System.out.println("PairList : " + pairList);
