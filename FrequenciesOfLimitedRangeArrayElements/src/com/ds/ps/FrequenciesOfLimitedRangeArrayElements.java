@@ -2,7 +2,7 @@ package com.ds.ps;
 
 public class FrequenciesOfLimitedRangeArrayElements {
 	public static void main(String args[]) {
-		int arr[] = { 2, 3, 2, 3, 5 };
+		int arr[] = { 1, 1, 1, 2, 3, 2, 3, 5, 1, 1 };
 		int[] frequencyRange = getFrequenciesOfLimitedRangeArrayElements(arr);
 
 		for (int i = 0; i < frequencyRange.length; i++) {
