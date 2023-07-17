@@ -28,7 +28,7 @@ public class IntersectionOfTwoArrays {
 
 		for (Map.Entry<Integer, Integer> map : arr1Map.entrySet()) {
 			if (arr2Map.containsKey(map.getKey())) {
-				intersection += Math.min((int) (map.getValue()), arr2Map.get(map.getKey()));
+				intersection++;
 			}
 		}
 
