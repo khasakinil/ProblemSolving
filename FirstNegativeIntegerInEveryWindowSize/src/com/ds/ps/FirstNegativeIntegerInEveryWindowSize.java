@@ -14,14 +14,15 @@ public class FirstNegativeIntegerInEveryWindowSize {
 	private static List<Long> getFirstNegativeIntegerInEveryWindowSize(long[] arr, int k) {
 		List<Long> firstNegativeInWindow = new ArrayList<>();
 
-		for (long i = 0; i < arr.length; i++) {
-			if (k + i >= arr.length) {
+		for (long i = 0; i <= arr.length; i++) {
+			if (k + i > arr.length) {
 				break;
 			}
 			long small = 0;
-			for (long j = i; j <= i + k; j++) {
+			for (long j = i; j < i + k; j++) {
 				if (arr[(int) j] < 0) {
 					small = arr[(int) j];
+					break;
 				}
 			}
 			firstNegativeInWindow.add(small);
