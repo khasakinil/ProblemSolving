@@ -6,7 +6,7 @@ import java.util.Map;
 public class SwappingPairsToMakeSumEqual {
 	public static void main(String args[]) {
 		long arr1[] = { 4, 1, 2, 1, 1, 2 };
-		long arr2[] = { 3, 6, 3, 3 };
+		long arr2[] = { 3, 6, 3, 3, 5 };
 		long isSwapMakeSumEqual = isSwappingPairsToMakeSumEqual(arr1, arr2);
 		System.out.println("isSwapMakeSumEqual : " + isSwapMakeSumEqual);
 	}
@@ -29,6 +29,9 @@ public class SwappingPairsToMakeSumEqual {
 			map2Arr.put((int) arr2[i], map2Arr.getOrDefault(arr2[i], 0) + 1);
 		}
 
+		for(Map.Entry<Integer, Integer> map : map1Arr.entrySet()) {
+		}
+		
 		return 0;
 	}
 }
