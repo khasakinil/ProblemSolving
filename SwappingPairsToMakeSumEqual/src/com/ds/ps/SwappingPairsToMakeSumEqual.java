@@ -6,9 +6,9 @@ import java.util.Map;
 public class SwappingPairsToMakeSumEqual {
 	public static void main(String args[]) {
 		long arr1[] = { 4, 1, 2, 1, 1, 2 };
-		long arr2[] = { 3, 6, 3, 3, 5 };
+		long arr2[] = { 3, 6, 3, 3, 5 , 67};
 		long isSwapMakeSumEqual = isSwappingPairsToMakeSumEqual(arr1, arr2);
-		System.out.println("isSwapMakeSumEqual : " + isSwapMakeSumEqual);
+		System.out.println("IsSwapMakeSumEqual : " + isSwapMakeSumEqual);
 	}
 
 	private static long isSwappingPairsToMakeSumEqual(long[] arr1, long[] arr2) {
