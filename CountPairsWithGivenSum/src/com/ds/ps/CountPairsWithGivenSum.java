@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class CountPairsWithGivenSum {
 	public static void main(String args[]) {
-		int arr[] = { 1, 5, 7, 1 };
+		int arr[] = { 1, 5, 7, 1, -1 };
 		int sum = 6;
 		int pairCount = getPairsCount(arr, sum);
 		System.out.println("PairCount : " + pairCount);
