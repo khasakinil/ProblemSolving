@@ -2,16 +2,14 @@ package com.practice;
 
 public class MultiplyTwoStrings {
 	public static void main(String args[]) {
-		String str1 = "-0033";
-		String str2 = "00002";
+		String str1 = "0033";
+		String str2 = "-00002";
 		String strMultiply = getStringsMultiply(str1, str2);
 		System.out.println("Multiple of two Strings : " + strMultiply);
 	}
 
 	private static String getStringsMultiply(String str1, String str2) {
 
-		char[] num1 = str1.toCharArray();
-		char[] num2 = str2.toCharArray();
 		boolean isStr1Neg = false;
 		boolean isStr2Neg = false;
 
@@ -25,6 +23,9 @@ public class MultiplyTwoStrings {
 			isStr2Neg = true;
 		}
 
+		char[] num1 = str1.toCharArray();
+		char[] num2 = str2.toCharArray();
+
 		int result = 0;
 
 		for (int i = 0; i < num1.length; i++) {
@@ -36,9 +37,7 @@ public class MultiplyTwoStrings {
 
 		if (isStr1Neg && isStr2Neg) {
 			return result + "";
-		}
-
-		if ((isStr1Neg && !isStr2Neg) || (!isStr1Neg && isStr2Neg)) {
+		} else if ((isStr1Neg && !isStr2Neg) || (!isStr1Neg && isStr2Neg)) {
 			return "-" + result + "";
 		}
 
