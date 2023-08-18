@@ -2,8 +2,8 @@ package com.practice;
 
 public class MultiplyTwoStrings {
 	public static void main(String args[]) {
-		String str1 = "003300";
-		String str2 = "-00000082";
+		String str1 = "0031300";
+		String str2 = "-00004082";
 		String strMultiply = getStringsMultiply(str1, str2);
 		System.out.println("Multiple of two Strings : " + strMultiply);
 	}
